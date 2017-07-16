@@ -1,17 +1,12 @@
 // This component handles the App template used on every page.
 import React, {PropTypes} from 'react';
-<<<<<<< HEAD
 import HtmlFooterComponent from './htmlFooter/htmlFooterComponent';
 import HtmlSideBarComponent from './htmlSideBar/htmlSideBarComponent';
 import HtmlHeaderComponent from './htmlHeader/htmlHeaderComponent';
-=======
-import Header from './common/Header';
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e
 
 class App extends React.Component {
   render() {
     return (
-<<<<<<< HEAD
       <div>
         <meta charSet="utf-8" />
         <link rel="icon" type="image/png" href="assets/img/favicon.ico" />
@@ -40,25 +35,11 @@ class App extends React.Component {
           </div>
         </div>
        
-=======
-      <div className="mcontainer">
-        <Header/>
-        {this.props.children}
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e
       </div>
     );
   }
 }
-<<<<<<< HEAD
 App.propTypes = {
   children: PropTypes.object.isRequired  
 };
-=======
-
-App.propTypes = {
-  children: PropTypes.object.isRequired  
-};
-
-
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e
 export default App;

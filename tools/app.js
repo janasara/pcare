@@ -59,7 +59,6 @@ MongoClient.connect(url, function(err, database) {
     });
 });
 
-<<<<<<< HEAD
 app.get('/diagnosticcenters', function(req, res) {
 
 var Client = require('node-rest-client').Client;
@@ -86,8 +85,6 @@ res.json(data);
 });
 });
 
-=======
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e
 app.get('/boards', function(req, res) {
     //console.log('I recevied a get request for boards');
     let collection = db.collection("boards");
@@ -110,7 +107,6 @@ app.get('/notes', function(req, res) {
 
 });
 
-<<<<<<< HEAD
 //MongoDB get
 // app.get('/labtests', function(req, res) {
 //     //console.log('I recevied a get request for boards');
@@ -263,165 +259,3 @@ app.put('/labtest/:id', function(req, res) {
 //     });
 
 // });
-=======
-app.get('/labtests', function(req, res) {
-    //console.log('I recevied a get request for boards');
-    let collection = db.collection("ordertests");
-    collection.find().toArray(function(err, docs) {
-        if (err) throw err;
-        //console.log(docs);
-        res.json(docs);
-    });
-
-});
-
-app.put('/board/:id', function(req, res) {
-    //console.log("Inside board update" );
-    //console.log(req.body.lanes);
-    let id = req.params.id;
-
-    let collection = db.collection("boards");
-    collection.update({ _id: id }, { $set: { "title": req.body.title, "lanes": req.body.lanes } }, function(err, doc) {
-        if (err) throw err;
-        res.json(doc);
-    });
-
-});
-
-app.put('/note/:id', function(req, res) {
-    //console.log("Inside note update" );
-    //console.log(req.body);
-    let id = req.params.id;
-
-    let collection = db.collection("notes");
-    collection.update({ _id: id }, {
-        $set: {
-            "task": req.body.task,
-            "desc": req.body.desc,
-            "edate": req.body.edate,
-            "rlinks": req.body.rlinks,
-            "bid": req.body.bid,
-            "lid": req.body.lid
-        }
-    }, function(err, doc) {
-        if (err) throw err;
-
-        res.json(doc);
-
-    });
-
-});
-
-
-app.post('/note', function(req, res) {
-    //console.log(req.body);
-    //console.log("Inside note create" );
-
-    let collection = db.collection("notes");
-    collection.insert(req.body, function(err, doc) {
-        if (err) throw err;
-        res.json(doc);
-    });
-
-
-});
-
-
-app.post('/board', function(req, res) {
-    //console.log(req.body);
-    //console.log("Inside board create" );
-
-    let collection = db.collection("boards");
-    collection.insert(req.body, function(err, doc) {
-        if (err) throw err;
-        res.json(doc);
-    });
-
-
-});
-
-
-
-app.delete('/note/:id', function(req, res) {
-    //console.log("Inside note delete" );
-    let id = req.params.id;
-    //console.log(id);
-    let collection = db.collection("notes");
-    collection.remove({ _id: id }, function(err, doc) {
-        if (err) throw err;
-        res.json(doc);
-    });
-
-
-});
-
-
-app.delete('/board/:id', function(req, res) {
-    //console.log("Inside note delete" );
-    let id = req.params.id;
-    //console.log(id);
-
-    let collection1 = db.collection("notes");
-    collection1.remove({ bid: id });
-    let collection = db.collection("boards");
-    collection.remove({ _id: id }, function(err, doc) {
-        if (err) throw err;
-        res.json(doc);
-    });
-
-});
-
-app.post('/labtest', function(req, res) {
-    //console.log(req.body);
-    //console.log("Inside board create" );
-
-    let collection = db.collection("ordertests");
-    collection.insert(req.body, function(err, doc) {
-        if (err) throw err;
-        res.json(doc);
-    });
-
-
-});
-
-app.delete('/labtest/:id', function(req, res) {
-    //console.log("Inside note delete" );
-    let id = req.params.id;
-    //console.log(id);
-    let collection = db.collection("ordertests");
-    collection.remove({ _id: id }, function(err, doc) {
-        if (err) throw err;
-        res.json(doc);
-    });
-
-});
-
-app.put('/labtest/:id', function(req, res) {
-    //console.log("Inside note update" );
-    //console.log(req.body);
-    let id = req.params.id;
-
-    let collection = db.collection("ordertests");
-    collection.update({ _id: id }, {
-        $set: {
-            "name": req.body.name,
-            "age": req.body.age,
-            "gender":req.body.gender,
-            "email": req.body.email,
-            "mobile":req.body.mobile,
-            "address1":req.body.address1,
-            "address2":req.body.address1,
-            "address3":req.body.address1,
-            "dcenter":req.body.dcenter,
-            "tests":req.body.tests
-
-        }
-    }, function(err, doc) {
-        if (err) throw err;
-
-        res.json(doc);
-
-    });
-
-});
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e

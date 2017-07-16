@@ -2,16 +2,9 @@ import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import * as labtestActions from '../../actions/labtestActions';
-<<<<<<< HEAD
 import LabtestEnter from './LabtestEnter';
 import toastr from 'toastr';
  // locations: props.diagnosticcenters
-=======
-
-import LabtestEnter from './LabtestEnter';
-import toastr from 'toastr';
-
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e
 export class LabtestsForm extends React.Component {
     constructor(props, context) {
         super(props, context);
@@ -21,16 +14,10 @@ export class LabtestsForm extends React.Component {
             errors: {},
             saving: false,
             deleteEnable: props.deleteEnable,
-<<<<<<< HEAD
             // locations: [{ value: 'vert',label: 'Vert Lab' },
             // { value: 'ther', label: 'Ther Lab' }, { value: 'medi', label: 'Medi lab' }],
             // locations:locations,
             
-=======
-            locations: [{ value: "vert", text: "Vert Lab" },
-            { value: "ther", text: "Ther Lab" }, { value: "medi", text: "Medi lab" }],
-
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e
         };
 
         this.updateLabtestState = this.updateLabtestState.bind(this);
@@ -57,12 +44,8 @@ export class LabtestsForm extends React.Component {
         let l = options.length
             for (let i = 0; i < l; i++) {
                 if (options[i].value) {
-<<<<<<< HEAD
                  //tests.push(options[i].value);
                   tests.push(options[i]);
-=======
-                tests.push(options[i].value);
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e
                 }
             }
         labtest["tests"] = tests;
@@ -121,11 +104,7 @@ export class LabtestsForm extends React.Component {
             .catch(error => {
                 toastr.error(error);
                 this.setState({ saving: false });
-<<<<<<< HEAD
                 this.redirect();
-=======
-
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e
 
             });
     }
@@ -133,17 +112,10 @@ export class LabtestsForm extends React.Component {
 
     deleteLabtest(event) {
         event.preventDefault();
-<<<<<<< HEAD
         if ((this.state.labtest.id).length == 0) {
             return;
         }
         this.props.actions.deleteLabtest(this.state.labtest.id)
-=======
-        if ((this.state.labtest._id).length == 0) {
-            return;
-        }
-        this.props.actions.deleteLabtest(this.state.labtest._id)
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e
             .then(() => this.redirect())
             .catch(error => {
                 toastr.error(error);
@@ -157,11 +129,7 @@ export class LabtestsForm extends React.Component {
 
         return (
             <div className="bcontainer">
-<<<<<<< HEAD
                 <div className="form-header paraheader-labtest"><label> {this.state.labtest.id ? (this.state.labtest.dcenter + "  test order from " + this.state.labtest.name) : "New Order"} </label></div>
-=======
-                <div className="form-header paraheader-labtest"><label> {this.state.labtest._id ? (this.state.labtest.dcenter + "  test order from " + this.state.labtest.name) : "New Order"} </label></div>
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e
                 <div>
                     <input type="button" value="Back" className="btn btn-primary btn-xs  bbtn" onClick={this.backBoards} />
 
@@ -174,11 +142,7 @@ export class LabtestsForm extends React.Component {
                     saving={this.state.saving}
                     deleteEnable={this.state.deleteEnable}
                     onDelete={this.deleteLabtest}
-<<<<<<< HEAD
                     allLocation={this.props.locations}
-=======
-                    allLocation={this.state.locations}
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e
                     onTestChange={this.updateTestChange}
 
                 />
@@ -196,11 +160,7 @@ LabtestsForm.propTypes = {
 };
 
 function getLabtestById(labtests, id) {
-<<<<<<< HEAD
     const labtest = labtests.filter(labtest => labtest.id == id);
-=======
-    const labtest = labtests.filter(labtest => labtest._id == id);
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e
     if (labtest) return labtest[0]; //since filter returns an array, have to grab the first.
     return null;
 }
@@ -210,7 +170,6 @@ LabtestsForm.contextTypes = {
 };
 
 function mapStateToProps(state, ownProps) {
-<<<<<<< HEAD
     debugger;
     let labtestId = ownProps.params.id;
     let dcode = ownProps.params.dcode;
@@ -231,14 +190,6 @@ function mapStateToProps(state, ownProps) {
         deleteEnable = false;
     }
     
-=======
-    const labtestId = ownProps.params.id;
-    let labtest = {
-        _id: '', name: '', age: '', gender: 'Male', mobile: '', address1: '', address2: '', address3: '',
-        email: '', dcenter: '', tests: []
-    };
-    let deleteEnable = true;
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e
     if (labtestId && state.labtests.length > 0) {
         labtest = getLabtestById(state.labtests, labtestId);
 
@@ -246,11 +197,7 @@ function mapStateToProps(state, ownProps) {
     }
     return {
         labtest: labtest,
-<<<<<<< HEAD
         locations:locationMap(state.diagnosticcenters),
-=======
-
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e
         deleteEnable: deleteEnable
     };
 }
@@ -260,7 +207,6 @@ function mapDispatchToProps(dispatch) {
         actions: bindActionCreators(labtestActions, dispatch)
     };
 }
-<<<<<<< HEAD
 function locationMap(dcenters)
 {
 
@@ -273,7 +219,4 @@ function locationMap(dcenters)
     });
 
 }
-=======
-
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e
 export default connect(mapStateToProps, mapDispatchToProps)(LabtestsForm);
