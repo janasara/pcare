@@ -7,14 +7,10 @@ export function loadLabtestSuccess(labtests) {
   return { type: ActionTypes.LOAD_LABTESTS_SUCCESS, labtests };
 
 }
-<<<<<<< HEAD
 // export function loadDiagnosticCenterSuccess(labtests) {
 //   return { type: ActionTypes.LOAD_DIAGNOSTICCENTER_SUCCESS, diagnosticcenters };
 
 // }
-=======
-
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e
 export function createLabtestSuccess(labtest) {
   return { type: ActionTypes.CREATE_LABTESTS_SUCCESS, labtest };
 }
@@ -27,12 +23,8 @@ export function deleteLabtestSuccess(labtestId) {
   return { type: ActionTypes.DELETE_LABTESTS_SUCCESS, labtestId };
 }
 
-<<<<<<< HEAD
 export function loadLabtests() { debugger;
   //debugger;
-=======
-export function loadLabtests() {debugger;
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e
   return function (dispatch) {
     return axiosCall().then(labtests => {
       dispatch(loadLabtestSuccess(labtests));
@@ -46,7 +38,6 @@ export function axiosCall(){
    return axios.get( ActionTypes.API_CALL+"labtests").then(response => response.data);
 }
 
-<<<<<<< HEAD
 // export function loadDiagnosticCenters() {
 //   //debugger;
 //   return function (dispatch) {
@@ -66,12 +57,6 @@ export function saveLabtest(labtest) {
  
   return function (dispatch) {
     if ((labtest.id).length>0 ){
-=======
-export function saveLabtest(labtest) {debugger;
- 
-  return function (dispatch) {
-    if ((labtest._id).length>0 ){
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e
         return axiosSaveLabtest(labtest).then(labtest => {
           dispatch(updateLabtestSuccess(labtest));            
         }).catch(error => {
@@ -91,21 +76,12 @@ export function saveLabtest(labtest) {debugger;
 
 export function axiosSaveLabtest(labtest){ 
 
-<<<<<<< HEAD
  if ((labtest.id).length>0 ){
 
    return axios.put(ActionTypes.API_CALL+"labtest/"+labtest.id, labtest).then(() => labtest);
 
  } else {
    labtest.id=getOrderId(labtest.dcenter?labtest.dcenter:"ord");
-=======
- if ((labtest._id).length>0 ){
-
-   return axios.put(ActionTypes.API_CALL+"labtest/"+labtest._id, labtest).then(() => labtest);
-
- } else {
-   labtest._id=getOrderId(labtest.dcenter?labtest.dcenter:"ord");
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e
    return axios.post(ActionTypes.API_CALL+"labtest",labtest).then(() => labtest);
  }
 }

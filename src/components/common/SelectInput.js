@@ -13,11 +13,7 @@ const SelectInput = ({name, label, onChange, defaultOption, value, error, option
           className="form-control">
           <option value="">{defaultOption}</option>
           {options.map((option) => {
-<<<<<<< HEAD
             return <option key={option.value} value={option.value}>{option.label}</option>;
-=======
-            return <option key={option.value} value={option.value}>{option.text}</option>;
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e
           })
           }
         </select>

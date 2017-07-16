@@ -54,7 +54,6 @@ export default {
     ]
   },
   postcss: ()=> [autoprefixer]
-<<<<<<< HEAD
   
 };
 
@@ -69,6 +68,3 @@ export default {
 //   //other options goes here
 //   plugins: [ignore]
 // };
-=======
-};
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e

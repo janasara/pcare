@@ -9,7 +9,6 @@ import { Provider } from 'react-redux';
 import routes from './routes';
 
 import {loadLabtests} from './actions/labtestActions';
-<<<<<<< HEAD
 import {loadDiagnosticCenters} from './actions/diagnosticcenterActions';
 import {loadHomeremedies} from './actions/homeremediesActions';
 
@@ -19,14 +18,10 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 // import '../node_modules/css/light-bootstrap-dashboard.min.css';
 // import '../node_modules/css/demo.css';
 
-=======
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e
 import '../node_modules/toastr/build/toastr.min.css';
 import './favicon.ico';
 
 
-<<<<<<< HEAD
 
 
 
@@ -43,18 +38,12 @@ import './favicon.ico';
     // <!--  CSS for Demo Purpose, don't include it in your project     -->
     // <link href="assets/css/demo.css" rel="stylesheet" />
 
-=======
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e
 const store = configureStore();
 
 
 store.dispatch(loadLabtests());
-<<<<<<< HEAD
 store.dispatch(loadDiagnosticCenters());
 store.dispatch(loadHomeremedies());
-=======
-
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e
 
 render(
     <Provider store={store}>

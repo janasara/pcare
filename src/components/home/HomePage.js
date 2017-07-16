@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { PropTypes } from 'react';
 
 import { connect } from 'react-redux';
@@ -13,33 +12,22 @@ class HomePage extends React.Component {
   }
   render() {
        const { diagnosticcenters } = this.props;
-=======
-import React from 'react';
-
-
-class HomePage extends React.Component {
-  render() {
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e
     return (
       <div >
    
         <p>Patient Care Dashboard</p>
 
-<<<<<<< HEAD
          <div className="bcontainer" >
       
 
         <DiagnosticList diagnosticcenters={diagnosticcenters} />
       </div>
 
-=======
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e
       </div>
     );
   }
 }
 
-<<<<<<< HEAD
 
 
 // export default HomePage;
@@ -65,6 +53,3 @@ function mapDispatchToProps(dispatch) {
   };
 }
 export default connect(mapStateToProps, mapDispatchToProps)(HomePage);
-=======
-export default HomePage;
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e

@@ -5,15 +5,9 @@ import Select from 'react-select';
 import 'react-select/dist/react-select.css';
 
 
-<<<<<<< HEAD
 const Testoptions = [{ value: '5', label: 'Albumin' },
 { value: '6', label: 'Calcium' },
 { value: '7', label: 'Magnisium' }
-=======
-const Testoptions = [{ value: 'Albumin', label: 'Albumin' },
-{ value: 'Calcium', label: 'Calcium' },
-{ value: 'Magnisium', label: 'Magnisium' }
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e
 ];
 
 const LabtestEnter = ({ labtest, onChange, errors, saving, deleteEnable, allLocation, onTestChange, onSave, onDelete }) => {
@@ -30,10 +24,7 @@ const LabtestEnter = ({ labtest, onChange, errors, saving, deleteEnable, allLoca
                     value={labtest.dcenter}
                     defaultOption="Select DIagnosis Center"
                     options={allLocation}
-<<<<<<< HEAD
                    
-=======
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e
                     onChange={onChange} error={errors.dcenter} />
             </div>
             <div className="telement ">

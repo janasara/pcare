@@ -176,11 +176,7 @@ body {
 
   color: #efefef;
 
-<<<<<<< HEAD
   background-color:#9368E9;
-=======
-  background-color:#002b49;
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e
 
   border-top-left-radius: 0.5em;
   border-top-right-radius: 0.5em;
@@ -193,11 +189,7 @@ body {
 
   color: #efefef;
 
-<<<<<<< HEAD
   background-color:#9368E9;
-=======
-  background-color:dimgrey;
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e
 
   border-top-left-radius: 0.5em;
   border-top-right-radius: 0.5em;
@@ -302,7 +294,6 @@ body {
   text-align:left;
   font-family: sans-serif;
   font-size: 18px;
-<<<<<<< HEAD
 }
 
 .floatright
@@ -326,6 +317,4 @@ body {
 .dashboard-fontclr{
   color: blue;
 
-=======
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e
 }

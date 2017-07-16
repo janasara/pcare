@@ -1,18 +1,6 @@
 {
-<<<<<<< HEAD
   // http://eslint.org/docs/rules/
  "root": true,
-=======
-  "root": true,
-  "extends": [
-    "eslint:recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings"
-  ],
-  "plugins": [
-    "react"
-  ],
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e
   "parser": "babel-eslint",
   "parserOptions": {
     "ecmaVersion": 6,
@@ -22,7 +10,6 @@
       "experimentalObjectRestSpread": true
     }
   },
-<<<<<<< HEAD
   "extends": [
     "eslint:recommended",
     "plugin:import/errors",
@@ -78,21 +65,6 @@
     "no-debugger": 1,
     "no-var": 0,
     "semi": 0,
-=======
-  "env": {
-    "es6": true,
-    "browser": true,
-    "node": true,
-    "jquery": true,
-    "mocha": true
-  },
-  "rules": {
-    "quotes": 0,
-    "no-console": 0,
-    "no-debugger": 1,
-    "no-var": 1,
-    "semi": [1, "always"],
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e
     "no-trailing-spaces": 0,
     "eol-last": 0,
     "no-underscore-dangle": 0,
@@ -129,7 +101,6 @@
     "import/extensions": 1,
     "react/self-closing-comp": 0,
     "react/sort-comp": 1,
-<<<<<<< HEAD
     "react/jsx-wrap-multilines": 1,
     ////////// Possible Errors //////////
 
@@ -303,10 +274,3 @@
     "no-plusplus": 0      // disallow use of unary operators, ++ and -- (off by default)
   }
 }
-=======
-    "react/jsx-wrap-multilines": 1
-  },
-  "globals": {
-  }
-}
->>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e
