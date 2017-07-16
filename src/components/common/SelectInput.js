@@ -1,0 +1,40 @@
+import React, {PropTypes} from 'react';
+
+const SelectInput = ({name, label, onChange, defaultOption, value, error, options}) => {
+  return (
+    <div className="telement">
+      <label className="telementl" htmlFor={name}>{label}</label>
+      <div className="telementn">
+        {/* Note, value is set here rather than on the option - docs: https://facebook.github.io/react/docs/forms.html */}
+        <select
+          name={name}
+          value={value}
+          onChange={onChange}
+          className="form-control">
+          <option value="">{defaultOption}</option>
+          {options.map((option) => {
+<<<<<<< HEAD
+            return <option key={option.value} value={option.value}>{option.label}</option>;
+=======
+            return <option key={option.value} value={option.value}>{option.text}</option>;
+>>>>>>> 1a1d9ede9cbb09034eaff46f55fa1971e529384e
+          })
+          }
+        </select>
+        {error && <div className="alert alert-danger">{error}</div>}
+      </div>
+    </div>
+  );
+};
+
+SelectInput.propTypes = {
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  defaultOption: PropTypes.string,
+  value: PropTypes.string,
+  error: PropTypes.string,
+  options: PropTypes.arrayOf(PropTypes.object)
+};
+
+export default SelectInput;
