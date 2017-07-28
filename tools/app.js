@@ -66,7 +66,7 @@ var client = new Client();
   console.log('I recevied a get request for diagnosticcenters');
 client.get("http://localhost:9761/patientcare/v1/diagnosticcenters", function (data, response) {
 // parsed response body as js object 
-console.log(docs);
+// console.log(docs);
 res.json(data);
 
 });
